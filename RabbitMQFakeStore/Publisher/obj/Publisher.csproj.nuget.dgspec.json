@@ -1,40 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Publisher\\Publisher.csproj": {}
+    "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Publisher/Publisher.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Publisher\\Publisher.csproj": {
+    "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Publisher/Publisher.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Publisher\\Publisher.csproj",
+        "projectUniqueName": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Publisher/Publisher.csproj",
         "projectName": "Publisher",
-        "projectPath": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Publisher\\Publisher.csproj",
-        "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Publisher\\obj\\",
+        "projectPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Publisher/Publisher.csproj",
+        "packagesPath": "/Users/ezgiduzenlier/.nuget/packages/",
+        "outputPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Publisher/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nuhay\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ezgiduzenlier/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj"
+              "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj": {
+                "projectPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj"
               }
             }
           }
@@ -43,11 +36,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -82,33 +70,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj": {
+    "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj",
+        "projectUniqueName": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nuhay\\Desktop\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\obj\\",
+        "projectPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
+        "packagesPath": "/Users/ezgiduzenlier/.nuget/packages/",
+        "outputPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nuhay\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ezgiduzenlier/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -121,11 +102,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -169,7 +145,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

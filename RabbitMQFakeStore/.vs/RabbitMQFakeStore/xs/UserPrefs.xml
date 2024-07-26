@@ -1,5 +1,37 @@
 ﻿<Properties StartupConfiguration="{EB57F5FE-D751-4C39-A9DD-21F8B68EF3E9}|https">
-  <MonoDevelop.Ide.ItemProperties.Publisher FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.ItemProperties.Consumer FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Publisher FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Publisher/Controllers/ProductController.cs">
+    <Files>
+      <File FileName="Consumer/Program.cs" />
+      <File FileName="Shared/Models/Product.cs" />
+      <File FileName="Publisher/Controllers/ProductController.cs" Line="25" Column="1" />
+      <File FileName="Shared/RequestResponseMessages/ResponseMessage.cs" />
+      <File FileName="Shared/RequestResponseMessages/RequestMessage.cs" />
+      <File FileName="Publisher/Program.cs" />
+      <File FileName="Publisher/appsettings.Development.json" />
+      <File FileName="Publisher/appsettings.json" />
+      <File FileName="Publisher/Properties/launchSettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RabbitMQFakeStore" expanded="True" selected="True">
+            <Node name="Consumer" expanded="True" />
+            <Node name="Publisher" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Consumer FirstBuild="True" />
 </Properties>
