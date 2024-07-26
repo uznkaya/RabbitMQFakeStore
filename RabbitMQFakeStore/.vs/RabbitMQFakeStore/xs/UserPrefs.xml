@@ -1,37 +1,50 @@
-﻿<Properties StartupConfiguration="{EB57F5FE-D751-4C39-A9DD-21F8B68EF3E9}|https">
-  <MonoDevelop.Ide.ItemProperties.Publisher FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{FC5AC826-DA63-4ACC-B5DE-BAC9B94C9C1A}" ItemName="Consumer" ConfigurationId="Default" />
+        <StartupItem ItemId="{EB57F5FE-D751-4C39-A9DD-21F8B68EF3E9}" ItemName="Publisher" ConfigurationId="https" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.Consumer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Publisher/Controllers/ProductController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Shared/RequestResponseMessages/RequestMessage.cs">
     <Files>
-      <File FileName="Consumer/Program.cs" />
-      <File FileName="Shared/Models/Product.cs" />
-      <File FileName="Publisher/Controllers/ProductController.cs" Line="25" Column="1" />
-      <File FileName="Shared/RequestResponseMessages/ResponseMessage.cs" />
-      <File FileName="Shared/RequestResponseMessages/RequestMessage.cs" />
-      <File FileName="Publisher/Program.cs" />
-      <File FileName="Publisher/appsettings.Development.json" />
-      <File FileName="Publisher/appsettings.json" />
-      <File FileName="Publisher/Properties/launchSettings.json" />
+      <File FileName="Consumer/Program.cs" Line="42" Column="179" />
+      <File FileName="Consumer/Consumers/RequestMessageConsumer.cs" Line="23" Column="32" />
+      <File FileName="Shared/RequestResponseMessages/ResponseMessage.cs" Line="11" Column="25" />
+      <File FileName="Shared/RequestResponseMessages/RequestMessage.cs" Line="17" Column="56" />
+      <File FileName="Publisher/appsettings.json" Line="1" Column="1" />
+      <File FileName="Shared/ApplicationDbContext.cs" Line="8" Column="1" />
+      <File FileName="Shared/Migrations/20240726161937_initial.cs" />
+      <File FileName="Publisher/Program.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="RabbitMQFakeStore" expanded="True" selected="True">
-            <Node name="Consumer" expanded="True" />
+          <Node name="RabbitMQFakeStore" expanded="True">
+            <Node name="Consumer">
+              <Node name="Consumers" expanded="True" />
+            </Node>
             <Node name="Publisher" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
+            </Node>
+            <Node name="Shared">
+              <Node name="RequestResponseMessages" expanded="True">
+                <Node name="RequestMessage.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Consumer FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Publisher PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Consumer/Consumers/RequestMessageConsumer.cs" relfile="Consumer/Consumers/RequestMessageConsumer.cs" line="20" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
