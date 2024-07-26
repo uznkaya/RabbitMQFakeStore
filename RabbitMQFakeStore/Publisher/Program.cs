@@ -1,4 +1,6 @@
 ﻿using MassTransit;
+using Microsoft.EntityFrameworkCore;
+using Shared;
 using Shared.RequestResponseMessages;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 string rabbitMqUri = "amqp://guest:guest@localhost:5672";
 string requestQueueName = "FakeStoreQueue";
+
+
 
 builder.Services.AddMassTransit(x =>
 {
@@ -21,6 +25,7 @@ builder.Services.AddMassTransit(x =>
 builder.Services.AddMassTransitHostedService();
 
 
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

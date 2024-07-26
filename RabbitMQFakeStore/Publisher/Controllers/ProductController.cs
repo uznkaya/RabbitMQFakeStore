@@ -1,5 +1,6 @@
 ﻿using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using Shared;
 using Shared.RequestResponseMessages;
 
 namespace Publisher.Controllers
@@ -10,6 +11,7 @@ namespace Publisher.Controllers
     {
 
         private readonly IRequestClient<RequestMessage> _client;
+        private readonly ApplicationDbContext _context;
 
         public ProductController(IRequestClient<RequestMessage> client)
         {
@@ -22,6 +24,7 @@ namespace Publisher.Controllers
             var response = await _client.GetResponse<ResponseMessage>(requestMessage);
             return Ok(response);
         }
+       
 
     }
 }
