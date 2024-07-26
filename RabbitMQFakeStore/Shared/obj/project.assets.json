@@ -4107,24 +4107,25 @@
     ]
   },
   "packageFolders": {
-    "/Users/ezgiduzenlier/.nuget/packages/": {}
+    "/Users/mehmetcanuzunkaya/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
+      "projectUniqueName": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
-      "packagesPath": "/Users/ezgiduzenlier/.nuget/packages/",
-      "outputPath": "/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Shared/obj/",
+      "projectPath": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
+      "packagesPath": "/Users/mehmetcanuzunkaya/.nuget/packages/",
+      "outputPath": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/ezgiduzenlier/.nuget/NuGet/NuGet.Config"
+        "/Users/mehmetcanuzunkaya/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4180,7 +4181,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
