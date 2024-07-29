@@ -1,6 +1,8 @@
-﻿using MassTransit;
+﻿using AutoMapper;
+using MassTransit;
 using Shared;
 using Shared.RequestResponseMessages;
+using Shared.RequestViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,24 +15,21 @@ namespace Consumer.Consumers
     public class RequestMessageConsumer : IConsumer<RequestMessage>
     {
         private readonly ApplicationDbContext _context;
-        public RequestMessageConsumer(ApplicationDbContext context)
+        private readonly IMapper _mapper;
+
+        public RequestMessageConsumer(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
         public async Task Consume(ConsumeContext<RequestMessage> context)
         {
 
             var message = context.Message;
+            var newProduct = _mapper.Map<CreateProductVM>(message);
 
             var httpClient = new HttpClient();
-            var response = await httpClient.PostAsJsonAsync("https://fakestoreapi.com/products", new
-            {
-                message.Title,
-                message.Price,
-                message.Description,
-                message.Image,
-                message.Category
-            });
+            var response = await httpClient.PostAsJsonAsync("https://fakestoreapi.com/products", newProduct);
             if (response.IsSuccessStatusCode)
             {
                 var entity = await _context.RequestMessages.FindAsync(message.Id);
