@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Consumer.ExternalServices;
 using MassTransit;
 using Shared;
 using Shared.RequestResponseMessageModel.Product;
@@ -17,11 +18,13 @@ namespace Consumer.Consumers
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly FakeStoreService _storeService;
 
-        public CreateProductConsumer(ApplicationDbContext context, IMapper mapper)
+        public CreateProductConsumer(ApplicationDbContext context, IMapper mapper, FakeStoreService storeService)
         {
             _context = context;
             _mapper = mapper;
+            _storeService = storeService;
         }
         public async Task Consume(ConsumeContext<Product> context)
         {
@@ -29,8 +32,8 @@ namespace Consumer.Consumers
             var message = context.Message;
             var newProduct = _mapper.Map<CreateProductVM>(message);
 
-            var httpClient = new HttpClient();
-            var response = await httpClient.PostAsJsonAsync("https://fakestoreapi.com/products", newProduct);
+           var response = await _storeService.CreateproductRequest(newProduct);
+
             if (response.IsSuccessStatusCode)
             {
                 var entity = await _context.Products.FindAsync(message.Id);
