@@ -1,8 +1,8 @@
 ﻿using System;
-namespace Shared.RequestViewModel
+namespace Shared.RequestViewModel.Product
 {
-	public class CreateProductVM
-	{
+    public class CreateProductVM
+    {
         public string? Title { get; set; }
         public string? Description { get; set; }
         public string? Image { get; set; }

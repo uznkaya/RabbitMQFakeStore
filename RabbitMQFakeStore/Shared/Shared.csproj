@@ -25,8 +25,4 @@
     <None Remove="RequestViewModel\" />
     <None Remove="Dtos\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RequestViewModel\" />
-    <Folder Include="Dtos\" />
-  </ItemGroup>
 </Project>

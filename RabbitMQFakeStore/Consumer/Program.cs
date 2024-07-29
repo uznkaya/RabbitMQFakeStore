@@ -38,15 +38,15 @@ using Shared;
 using Shared.RequestResponseMessages;
 
 var services = new ServiceCollection();
-services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=localhost,1433; Database=RabbitMQFakeStoreDb; User Id=SA; Password=reallyStrongPwd123;TrustServerCertificate=True;MultiSubnetFailover=True"));
-//services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=RabbitMQFakeStoreDb;Trusted_Connection=True;MultiSubnetFailover=True"));
+//services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=localhost,1433; Database=RabbitMQFakeStoreDb; User Id=SA; Password=reallyStrongPwd123;TrustServerCertificate=True;MultiSubnetFailover=True"));
+services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=RabbitMQFakeStoreDb;Trusted_Connection=True;MultiSubnetFailover=True"));
 
 //not: RequestMessageConsumer sınıfınıza DbContext bağımlılığını enjekte edebilirsiniz. Bu sayede, consumer'ınız DbContext'i kullanarak veritabanı işlemlerini gerçekleştirebilir.
-services.AddScoped<RequestMessageConsumer>();
+services.AddScoped<CreateProductConsumer>();
 
 services.AddMassTransit(x =>
 {
-    x.AddConsumer<RequestMessageConsumer>();
+    x.AddConsumer<CreateProductConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -54,7 +54,7 @@ services.AddMassTransit(x =>
 
         cfg.ReceiveEndpoint("FakeStoreQueue", e =>
         {
-            e.ConfigureConsumer<RequestMessageConsumer>(context);
+            e.ConfigureConsumer<CreateProductConsumer>(context);
         });
     });
 });

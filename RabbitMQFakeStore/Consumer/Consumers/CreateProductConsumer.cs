@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using MassTransit;
 using Shared;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
-using Shared.RequestViewModel;
+using Shared.RequestViewModel.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,17 @@ using System.Threading.Tasks;
 
 namespace Consumer.Consumers
 {
-    public class RequestMessageConsumer : IConsumer<RequestMessage>
+    public class CreateProductConsumer : IConsumer<Product>
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
 
-        public RequestMessageConsumer(ApplicationDbContext context, IMapper mapper)
+        public CreateProductConsumer(ApplicationDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
-        public async Task Consume(ConsumeContext<RequestMessage> context)
+        public async Task Consume(ConsumeContext<Product> context)
         {
 
             var message = context.Message;
@@ -32,7 +33,7 @@ namespace Consumer.Consumers
             var response = await httpClient.PostAsJsonAsync("https://fakestoreapi.com/products", newProduct);
             if (response.IsSuccessStatusCode)
             {
-                var entity = await _context.RequestMessages.FindAsync(message.Id);
+                var entity = await _context.Products.FindAsync(message.Id);
                 if(entity != null)
                 {
                     entity.IsSucceeded = true;

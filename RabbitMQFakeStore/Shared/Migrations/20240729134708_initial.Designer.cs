@@ -12,8 +12,8 @@ using Shared;
 namespace Shared.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240729075328_initial2")]
-    partial class initial2
+    [Migration("20240729134708_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Shared.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Shared.RequestResponseMessages.RequestMessage", b =>
+            modelBuilder.Entity("Shared.RequestResponseMessageModel.Product.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -53,7 +53,7 @@ namespace Shared.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RequestMessages");
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }
