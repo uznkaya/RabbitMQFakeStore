@@ -19,12 +19,6 @@ namespace Consumer.Consumers
         }
         public async Task Consume(ConsumeContext<RequestMessage> context)
         {
-            /*
-            var messageId = context.Message.Id;
-            var message = _context.RequestMessages.FirstOrDefault(x => x.Id == messageId);
-            Console.WriteLine();
-            await context.RespondAsync<ResponseMessage>(new() { Text = "başarılı" });
-            */
 
             var message = context.Message;
 
@@ -44,14 +38,21 @@ namespace Consumer.Consumers
                 {
                     entity.IsSucceeded = true;
                     await _context.SaveChangesAsync();
+
+                    await context.RespondAsync<ResponseMessage>(new()
+                    {
+                        Text = $"{message.Title} adlı ürün başarıyla kaydedilmiştir."
+                    });
+
+                    Console.WriteLine($"{message.Title} adlı ürün başarıyla kaydedilmiştir.");
                 }
-
-                await context.RespondAsync<ResponseMessage>(new()
+                else
                 {
-                    Text = $"{message.Title} adlı ürün başarıyla kaydedilmiştir."
-                });
-
-                Console.WriteLine($"{message.Title} adlı ürün başarıyla kaydedilmiştir.");
+                    await context.RespondAsync<ResponseMessage>(new()
+                    {
+                        Text = $"{message.Title} adlı ürün bulunamadı"
+                    });
+                }
             }
             else
             {
