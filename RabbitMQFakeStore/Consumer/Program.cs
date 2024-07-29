@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using Consumer.Consumers;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -27,4 +27,39 @@ var bus = Bus.Factory.CreateUsingRabbitMq(cfg =>
 await bus.StartAsync();
 
 Console.ReadLine();
+*/
 
+using Consumer.Consumers;
+using MassTransit;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Shared;
+using Shared.RequestResponseMessages;
+
+var services = new ServiceCollection();
+services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=localhost,1433; Database=RabbitMQFakeStoreDb; User Id=SA; Password=reallyStrongPwd123;TrustServerCertificate=True;MultiSubnetFailover=True"));
+
+//not: RequestMessageConsumer sınıfınıza DbContext bağımlılığını enjekte edebilirsiniz. Bu sayede, consumer'ınız DbContext'i kullanarak veritabanı işlemlerini gerçekleştirebilir.
+services.AddScoped<RequestMessageConsumer>();
+
+services.AddMassTransit(x =>
+{
+    x.AddConsumer<RequestMessageConsumer>();
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("amqp://guest:guest@localhost:5672");
+
+        cfg.ReceiveEndpoint("FakeStoreQueue", e =>
+        {
+            e.ConfigureConsumer<RequestMessageConsumer>(context);
+        });
+    });
+});
+
+var provider = services.BuildServiceProvider();
+
+var busControl = provider.GetRequiredService<IBusControl>();
+await busControl.StartAsync();
+
+Console.ReadLine();
