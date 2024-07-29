@@ -1,7 +1,9 @@
-﻿using MassTransit;
+﻿using AutoMapper;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Shared;
 using Shared.RequestResponseMessages;
+using Shared.RequestViewModel;
 
 namespace Publisher.Controllers
 {
@@ -12,19 +14,22 @@ namespace Publisher.Controllers
 
         private readonly IRequestClient<RequestMessage> _client;
         private readonly ApplicationDbContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductController(IRequestClient<RequestMessage> client, ApplicationDbContext context)
+        public ProductController(IRequestClient<RequestMessage> client, ApplicationDbContext context, IMapper mapper)
         {
             _client = client;
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct(RequestMessage requestMessage)
+        public async Task<IActionResult> CreateProduct(CreateProductVM createProductVM)
         {
-            _context.RequestMessages.Add(requestMessage);
+            var newProduct = _mapper.Map<RequestMessage>(createProductVM);
+            _context.RequestMessages.Add(newProduct);
             await _context.SaveChangesAsync();
-            var response = await _client.GetResponse<ResponseMessage>(requestMessage);
+            var response = await _client.GetResponse<ResponseMessage>(newProduct);
             return Ok(response);
         }
        
