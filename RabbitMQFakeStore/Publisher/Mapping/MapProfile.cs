@@ -1,15 +1,16 @@
 ﻿using System;
 using AutoMapper;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
-using Shared.RequestViewModel;
+using Shared.RequestViewModel.Product;
 
 namespace Publisher.Mapping
 {
-	public class MapProfile : Profile
+    public class MapProfile : Profile
 	{
 		public MapProfile()
 		{
-			CreateMap<RequestMessage, CreateProductVM>().ReverseMap();
+			CreateMap<Product, CreateProductVM>().ReverseMap();
 		}
 	}
 }

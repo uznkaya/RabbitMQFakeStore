@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,6 @@ namespace Shared
         {
         }
 
-       public DbSet<RequestMessage> RequestMessages { get; set; }
+       public DbSet<Product> Products { get; set; }
     }
 }

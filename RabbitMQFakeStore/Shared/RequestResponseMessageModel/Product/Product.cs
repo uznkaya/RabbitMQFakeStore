@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shared.RequestResponseMessages
+namespace Shared.RequestResponseMessageModel.Product
 {
-    public class RequestMessage
+    public class Product
     {
         public int Id { get; set; }
         public string? Title { get; set; }

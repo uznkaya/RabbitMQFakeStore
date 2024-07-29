@@ -2,8 +2,9 @@
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Shared;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
-using Shared.RequestViewModel;
+using Shared.RequestViewModel.Product;
 
 namespace Publisher.Controllers
 {
@@ -12,11 +13,11 @@ namespace Publisher.Controllers
     public class ProductController : ControllerBase
     {
 
-        private readonly IRequestClient<RequestMessage> _client;
+        private readonly IRequestClient<Product> _client;
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
 
-        public ProductController(IRequestClient<RequestMessage> client, ApplicationDbContext context, IMapper mapper)
+        public ProductController(IRequestClient<Product> client, ApplicationDbContext context, IMapper mapper)
         {
             _client = client;
             _context = context;
@@ -26,8 +27,8 @@ namespace Publisher.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductVM createProductVM)
         {
-            var newProduct = _mapper.Map<RequestMessage>(createProductVM);
-            _context.RequestMessages.Add(newProduct);
+            var newProduct = _mapper.Map<Product>(createProductVM);
+            _context.Products.Add(newProduct);
             await _context.SaveChangesAsync();
             var response = await _client.GetResponse<ResponseMessage>(newProduct);
             return Ok(response);

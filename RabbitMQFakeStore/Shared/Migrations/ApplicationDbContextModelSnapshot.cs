@@ -22,7 +22,7 @@ namespace Shared.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Shared.RequestResponseMessages.RequestMessage", b =>
+            modelBuilder.Entity("Shared.RequestResponseMessageModel.Product.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace Shared.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RequestMessages");
+                    b.ToTable("Products");
                 });
 #pragma warning restore 612, 618
         }

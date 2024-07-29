@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Publisher.Mapping;
 using Shared;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
 
 
@@ -19,7 +20,7 @@ builder.Services.AddMassTransit(x =>
         cfg.Host(new Uri(rabbitMqUri), h => { });
     });
 
-    x.AddRequestClient<RequestMessage>(new Uri($"{rabbitMqUri}/{requestQueueName}"));
+    x.AddRequestClient<Product>(new Uri($"{rabbitMqUri}/{requestQueueName}"));
 });
 
 builder.Services.AddMassTransitHostedService();
