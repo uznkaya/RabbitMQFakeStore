@@ -14,8 +14,6 @@ namespace Shared.RequestResponseMessages
         public string? Image { get; set; }
         public string? Category { get; set; }
         public decimal Price { get; set; }
-        public bool? IsSucceeded { get; set; }
-
-
+        public bool? IsSucceeded { get; set; } = false;
     }
 }
