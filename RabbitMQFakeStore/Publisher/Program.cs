@@ -1,7 +1,10 @@
 ﻿using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using Publisher.Mapping;
 using Shared;
+using Shared.RequestResponseMessageModel.Product;
 using Shared.RequestResponseMessages;
+
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -10,8 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 string rabbitMqUri = "amqp://guest:guest@localhost:5672";
 string requestQueueName = "FakeStoreQueue";
 
-
-
 builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
@@ -19,12 +20,13 @@ builder.Services.AddMassTransit(x =>
         cfg.Host(new Uri(rabbitMqUri), h => { });
     });
 
-    x.AddRequestClient<RequestMessage>(new Uri($"{rabbitMqUri}/{requestQueueName}"));
+    x.AddRequestClient<Product>(new Uri($"{rabbitMqUri}/{requestQueueName}"));
 });
 
 builder.Services.AddMassTransitHostedService();
 
 
+builder.Services.AddAutoMapper(typeof(MapProfile));
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddControllers();
