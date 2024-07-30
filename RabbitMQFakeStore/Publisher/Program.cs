@@ -27,7 +27,8 @@ builder.Services.AddMassTransitHostedService();
 
 
 builder.Services.AddAutoMapper(typeof(MapProfile));
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>();
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
