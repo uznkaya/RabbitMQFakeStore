@@ -12,8 +12,8 @@ using Shared;
 namespace Shared.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240730112137_Initial")]
-    partial class Initial
+    [Migration("20240730121125_migbasemodel")]
+    partial class migbasemodel
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,9 @@ namespace Shared.Migrations
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -50,6 +53,9 @@ namespace Shared.Migrations
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

@@ -40,6 +40,7 @@ namespace Consumer.Consumers
                 if(entity != null)
                 {
                     entity.IsSucceeded = true;
+                    entity.UpdatedDate = DateTime.Now;
                     await _context.SaveChangesAsync();
 
                     await context.RespondAsync<ResponseMessage>(new()
