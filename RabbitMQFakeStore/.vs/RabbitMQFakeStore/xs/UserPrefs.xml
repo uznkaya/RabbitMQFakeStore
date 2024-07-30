@@ -1,11 +1,16 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.Consumer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/ezgiduzenlier/Desktop/projects/RabbitMQFakeStore/RabbitMQFakeStore/Consumer/Consumers/RequestMessageConsumer.cs" relfile="Consumer/Consumers/RequestMessageConsumer.cs" line="26" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Publisher PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RabbitMQFakeStore" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Consumer PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -14,48 +19,10 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Consumer/Consumers/RequestMessageConsumer.cs">
-    <Files>
-      <File FileName="Consumer/Program.cs" Line="62" Column="44" />
-      <File FileName="Consumer/Consumers/RequestMessageConsumer.cs" Line="19" Column="1" />
-      <File FileName="Shared/RequestResponseMessages/ResponseMessage.cs" />
-      <File FileName="Shared/RequestResponseMessages/RequestMessage.cs" Line="11" Column="13" />
-      <File FileName="Publisher/appsettings.json" Line="7" Column="1" />
-      <File FileName="Shared/Migrations/20240726161937_initial.cs" />
-      <File FileName="Publisher/Controllers/ProductController.cs" Line="28" Column="1" />
-      <File FileName="Shared/RequestViewModel/CreateProductVM.cs" Line="12" Column="2" />
-      <File FileName="Publisher/Mapping/MapProfile.cs" Line="17" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="RabbitMQFakeStore" expanded="True">
-            <Node name="Consumer">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Consumers">
-                <Node name="RequestMessageConsumer.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Publisher" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="ProjectDependencies" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Mapping" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
-            </Node>
-            <Node name="Shared">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Dtos" expanded="True" />
-              <Node name="RequestResponseMessages" expanded="True" />
-              <Node name="RequestViewModel" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Publisher PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Consumer/Consumers/RequestMessageConsumer.cs" relfile="Consumer/Consumers/RequestMessageConsumer.cs" line="26" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
