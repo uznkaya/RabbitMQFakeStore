@@ -16,6 +16,13 @@ namespace Shared
         {
         }
 
-       public DbSet<Product> Products { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=localhost,1433; Database=RabbitMQFakeStoreDb; User Id=SA; Password=reallyStrongPwd123;TrustServerCertificate=True;MultiSubnetFailover=True");
+
+            //optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=RabbitMQFakeStoreDb;Trusted_Connection=True;MultiSubnetFailover=True");
+        }
+
+        public DbSet<Product> Products { get; set; }
     }
 }

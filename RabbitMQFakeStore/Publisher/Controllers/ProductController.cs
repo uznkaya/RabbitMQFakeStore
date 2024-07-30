@@ -33,7 +33,16 @@ namespace Publisher.Controllers
             var response = await _client.GetResponse<ResponseMessage>(newProduct);
             return Ok(response);
         }
-       
+
+        /*
+        [HttpGet]
+        public async Task<IActionResult> GetProductAll()
+        {
+            // Elma, Kalem, PC, Sakız
+            // Elmayı aldı queue ya gönderdi. queue consumer kısmı kontrol edicek. Gelen veri doğru mu diye eğer doğru ise products listesine ekle
+            // products listesini döndür.
+        }
+        */
 
     }
 }

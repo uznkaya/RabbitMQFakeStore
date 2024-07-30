@@ -4168,32 +4168,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nuhay\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/mehmetcanuzunkaya/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nuhay\\Desktop\\DT\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj",
+      "projectUniqueName": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "C:\\Users\\nuhay\\Desktop\\DT\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\Shared.csproj",
-      "packagesPath": "C:\\Users\\nuhay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nuhay\\Desktop\\DT\\RabbitMQFakeStore\\RabbitMQFakeStore\\Shared\\obj\\",
+      "projectPath": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/Shared.csproj",
+      "packagesPath": "/Users/mehmetcanuzunkaya/.nuget/packages/",
+      "outputPath": "/Users/mehmetcanuzunkaya/Desktop/RabbitMQFakeStore/RabbitMQFakeStore/Shared/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\nuhay\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/mehmetcanuzunkaya/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4206,11 +4199,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4262,7 +4250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
