@@ -30,6 +30,7 @@ Console.ReadLine();
 */
 
 using Consumer.Consumers;
+using Consumer.ExternalServices;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,6 +44,7 @@ services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Ser
 
 //not: RequestMessageConsumer sınıfınıza DbContext bağımlılığını enjekte edebilirsiniz. Bu sayede, consumer'ınız DbContext'i kullanarak veritabanı işlemlerini gerçekleştirebilir.
 services.AddScoped<CreateProductConsumer>();
+services.AddHttpClient<FakeStoreService>();
 
 services.AddMassTransit(x =>
 {
