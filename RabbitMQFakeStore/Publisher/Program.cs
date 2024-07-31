@@ -7,8 +7,9 @@ using Shared.RequestResponseMessages;
 
 
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
 
+builder.Services.AddAutoMapper(typeof(MapProfile));
+builder.Services.AddDbContext<ApplicationDbContext>();
 
 string rabbitMqUri = "amqp://guest:guest@localhost:5672";
 string requestQueueName = "FakeStoreQueue";
@@ -25,9 +26,6 @@ builder.Services.AddMassTransit(x =>
 
 builder.Services.AddMassTransitHostedService();
 
-
-builder.Services.AddAutoMapper(typeof(MapProfile));
-builder.Services.AddDbContext<ApplicationDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllers();
